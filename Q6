@@ -1,0 +1,69 @@
+//1. Program for insertion, deletion, and traversal of an array:
+
+#include <stdio.h>
+
+void insert(int *arr, int *size, int index, int element) {
+    // Insertion code (same as before)
+}
+
+void deleteElement(int *arr, int *size, int index) {
+    // Deletion code (same as before)
+}
+
+void traverse(int *arr, int size) {
+    // Traversal code (same as before)
+}
+
+int main() {
+    // Main program with menu (same as before)
+}
+
+
+
+
+
+
+//2. Program for addition, multiplication, and subtraction of two arrays:
+
+#include <stdio.h>
+
+void addArrays(int *result, int *arr1, int *arr2, int size) {
+    // Addition code (same as before)
+}
+
+void multiplyArrays(int *result, int *arr1, int *arr2, int size) {
+    // Multiplication code (same as before)
+}
+
+void subtractArrays(int *result, int *arr1, int *arr2, int size) {
+    // Subtraction code (same as before)
+}
+
+void displayArray(int *arr, int size) {
+    // Display code (same as before)
+}
+
+int main() {
+    // Main program with menu (same as before)
+}
+
+
+
+
+
+
+//3. Program for merging two sorted arrays:
+
+#include <stdio.h>
+
+void mergeSortedArrays(int *arr1, int size1, int *arr2, int size2, int *merged) {
+    // Merging code (same as before)
+}
+
+void displayArray(int *arr, int size) {
+    // Display code (same as before)
+}
+
+int main() {
+    // Main program (same as before)
+}
