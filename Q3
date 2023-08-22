@@ -1,0 +1,91 @@
+#include <stdio.h>
+
+void insert(int arr[], int *size, int index, int element) {
+    if (*size >= index) {
+        for (int i = *size; i > index; i--) {
+            arr[i] = arr[i - 1];
+        }
+        arr[index] = element;
+        (*size)++;
+        printf("Element %d inserted at index %d.\n", element, index);
+    } else {
+        printf("Index out of bounds for insertion.\n");
+    }
+}
+
+
+void deleteElement(int arr[], int *size, int index) {
+    if (*size > index) {
+        int deletedElement = arr[index];
+        for (int i = index; i < *size - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        (*size)--;
+        printf("Element %d deleted from index %d.\n", deletedElement, index);
+    } else {
+        printf("Index out of bounds for deletion.\n");
+    }
+}
+
+
+void traverse(int arr[], int size) {
+    printf("Array elements: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int arr[100];
+    int size = 0;
+
+    int choice;
+    do {
+        printf("\n1. Insert element\n");
+        printf("2. Delete element\n");
+        printf("3. Traverse array\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                if (size < 100) {
+                    int index, element;
+                    printf("Enter the index for insertion: ");
+                    scanf("%d", &index);
+                    printf("Enter the element to insert: ");
+                    scanf("%d", &element);
+                    insert(arr, &size, index, element);
+                } else {
+                    printf("Array is full.\n");
+                }
+                break;
+            case 2:
+                if (size > 0) {
+                    int index;
+                    printf("Enter the index for deletion: ");
+                    scanf("%d", &index);
+                    deleteElement(arr, &size, index);
+                } else {
+                    printf("Array is empty.\n");
+                }
+                break;
+            case 3:
+                if (size > 0) {
+                    traverse(arr, size);
+                } else {
+                    printf("Array is empty.\n");
+                }
+                break;
+            case 4:
+                printf("Exiting the program.\n");
+                break;
+            default:
+                printf("Invalid choice.\n");
+        }
+    } while (choice != 4);
+
+    return 0;
+}
